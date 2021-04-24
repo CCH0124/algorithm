@@ -6,3 +6,4 @@
 |0015|3Sum|Medium|[link](Algorithm/Array/0015/README.md)|
 |0016|3Sum Closest|Medium|[link](Algorithm/Array/0016/README.md)|
 |0018|4Sum|Medium|[link](Algorithm/Array/0018/README.md)|
+|0026|Remove Duplicates from Sorted Array|Easy|[link](Algorithm/Array/0026/README.md)|
