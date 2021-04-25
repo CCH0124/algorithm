@@ -9,4 +9,5 @@
 |0026|Remove Duplicates from Sorted Array|Easy|[link](Algorithm/Array/0026/README.md)|
 |0027|Remove Element|Easy|[link](Algorithm/Array/0027/README.md)|
 |0031|Next Permutation|Medium|[link](Algorithm/Array/0031/README.md)|
-|0033|Search in Rotated Sorted Array|Medium|[link](Algorithm/Array/0034/README.md)|
+|0033|Search in Rotated Sorted Array|Medium|[link](Algorithm/Array/0033/README.md)|
+|0034|Find First and Last Position of Element in Sorted Array|Medium|[link](Algorithm/Array/0034/README.md)|
