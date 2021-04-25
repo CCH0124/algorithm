@@ -8,3 +8,4 @@
 |0018|4Sum|Medium|[link](Algorithm/Array/0018/README.md)|
 |0026|Remove Duplicates from Sorted Array|Easy|[link](Algorithm/Array/0026/README.md)|
 |0027|Remove Element|Easy|[link](Algorithm/Array/0027/README.md)|
+|0031|Next Permutation|Medium|[link](Algorithm/Array/0031/README.md)|
