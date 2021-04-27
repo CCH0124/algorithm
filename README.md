@@ -11,4 +11,5 @@
 |0031|Next Permutation|Medium|[link](Algorithm/Array/0031/README.md)|
 |0033|Search in Rotated Sorted Array|Medium|[link](Algorithm/Array/0033/README.md)|
 |0034|Find First and Last Position of Element in Sorted Array|Medium|[link](Algorithm/Array/0034/README.md)|
-|0035|Search Insert Position|Easy|[link](Algorithm/Array/0035/README.md)
+|0035|Search Insert Position|Easy|[link](Algorithm/Array/0035/README.md)|
+|0039|Combination Sum|Medium|[link](Algorithm/Array/0039/README.md)|
