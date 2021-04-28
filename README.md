@@ -14,3 +14,4 @@
 |0035|Search Insert Position|Easy|[link](Algorithm/Array/0035/README.md)|
 |0039|Combination Sum|Medium|[link](Algorithm/Array/0039/README.md)|
 |0040|Combination Sum II|Medium|[link](Algorithm/Array/0040/README.md)|
+|0041|First Missing Positive|Hard|[link](Algorithm/Array/0041/README.md)|
