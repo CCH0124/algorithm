@@ -15,3 +15,4 @@
 |0039|Combination Sum|Medium|[link](Algorithm/Array/0039/README.md)|
 |0040|Combination Sum II|Medium|[link](Algorithm/Array/0040/README.md)|
 |0041|First Missing Positive|Hard|[link](Algorithm/Array/0041/README.md)|
+|0042|Trapping Rain Water|Hard|[link](Algorithm/Array/0042/README.md)|
