@@ -19,3 +19,4 @@
 |0045|Jump Game II|Medium|[link](Algorithm/Array/0045/README.md)|
 |0046|Permutations|Medium|[link](Algorithm/Array/0046/README.md)|
 |0047|Permutations II|Medium|[link](Algorithm/Array/0047/README.md)|
+|0051|N-Queens|Hard|[link](Algorithm/Array/0051/README.md)|
