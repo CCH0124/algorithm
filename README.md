@@ -22,3 +22,4 @@
 |0051|N-Queens|Hard|[link](Algorithm/Array/0051/README.md)|
 |0053|Maximum Subarray|Easy|[link](Algorithm/Array/0053/README.md)|
 |0055| Jump Game|Medium|[link](Algorithm/Array/0055/README.md)|
+|0056| Merge Intervals|Medium|[link](Algorithm/Array/0056/README.md)|
