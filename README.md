@@ -26,3 +26,4 @@
 |0057| Insert Interval|Medium|[link](Algorithm/Array/0057/README.md)|
 |0063| Unique Paths II|Medium|[link](Algorithm/Array/0063/README.md)|
 |0064| Minimum Path Sum|Medium|[link](Algorithm/Array/0064/README.md)|
+|0066| Plus One|Easy|[link](Algorithm/Array/0066/README.md)|
