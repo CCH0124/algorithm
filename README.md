@@ -27,3 +27,4 @@
 |0063| Unique Paths II|Medium|[link](Algorithm/Array/0063/README.md)|
 |0064| Minimum Path Sum|Medium|[link](Algorithm/Array/0064/README.md)|
 |0066| Plus One|Easy|[link](Algorithm/Array/0066/README.md)|
+|0073| Set Matrix Zeroes|Medium|[link](Algorithm/Array/0073/README.md)|
