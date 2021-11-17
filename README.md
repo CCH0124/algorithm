@@ -29,6 +29,7 @@
 |0064| Minimum Path Sum|Medium|[link](Algorithm/Array/0064/README.md)|
 |0066| Plus One|Easy|[link](Algorithm/Array/0066/README.md)|
 |0073| Set Matrix Zeroes|Medium|[link](Algorithm/Array/0073/README.md)|
+|0075| Sort Colors|Medium|[link](Algorithm/Array/0075/README.md)|
 
 ## String
 |No.|Title|Difficulty|Solution|
