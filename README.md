@@ -31,6 +31,7 @@
 |0073| Set Matrix Zeroes|Medium|[link](Algorithm/Array/0073/README.md)|
 |0075| Sort Colors|Medium|[link](Algorithm/Array/0075/README.md)|
 |0077| Combinations|Medium|[link](Algorithm/Array/0077/README.md)|
+|0078| Subsets|Medium|[link](Algorithm/Array/0078/README.md)|
 ## String
 |No.|Title|Difficulty|Solution|
 |---|---|---|---|
