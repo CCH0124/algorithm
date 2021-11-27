@@ -32,6 +32,7 @@
 |0075| Sort Colors|Medium|[link](Algorithm/Array/0075/README.md)|
 |0077| Combinations|Medium|[link](Algorithm/Array/0077/README.md)|
 |0078| Subsets|Medium|[link](Algorithm/Array/0078/README.md)|
+|0079| Word Search|Medium|[link](Algorithm/Array/0079/README.md)|
 ## String
 |No.|Title|Difficulty|Solution|
 |---|---|---|---|
