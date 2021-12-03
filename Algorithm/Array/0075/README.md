@@ -38,19 +38,50 @@ Output: [1]
 ```java
 class Solution {
     public void sortColors(int[] nums) {
-        for(int i=0; i<nums.length-1; i++){
-			int index = i; // 初始從 i
-			// 找到列表中的最小元素
-			for(int j=i+1; j<nums.length; j++) {
-				if(nums[j] < nums[index]) { // 搜尋比當前數值小的值 
-					index = j;
-                }
-            }
-			// swap
-			int temp = nums[index];
-			nums[index] = nums[i];
-			nums[i] = temp;
-		}
+        int s = 0;
+        int e = nums.length - 1;
+        int m = 0;
+        while(m <= e) {
+           if (nums[m] == 0) {
+               int temp = nums[s];
+               nums[s] = nums[m];
+               nums[m]  = temp;
+               s++;
+               m++;
+           } else if (nums[m] == 1){
+               m++;
+           } else {
+               int temp = nums[e];
+               nums[e] = nums[m];
+               nums[m]  = temp;
+               e--;
+           }
+        }
+    }
+}
+```
+
+
+```go
+func sortColors(nums []int)  {
+    s := 0
+    e := len(nums) - 1
+    m := 0
+    for m <= e {
+        if nums[m] == 0 {
+            temp := nums[m]
+            nums[m] = nums[s]
+            nums[s] = temp
+            m = m + 1
+            s = s + 1
+        } else if nums[m] == 1 {
+            m = m + 1
+        } else {
+            temp := nums[e]
+            nums[e] = nums[m]
+            nums[m] = temp
+            e = e - 1
+        }
     }
 }
 ```

@@ -29,9 +29,10 @@
 |0064| Minimum Path Sum|Medium|[link](Algorithm/Array/0064/README.md)|
 |0066| Plus One|Easy|[link](Algorithm/Array/0066/README.md)|
 |0073| Set Matrix Zeroes|Medium|[link](Algorithm/Array/0073/README.md)|
-|0074| Search a 2D Matrix|Medium|[link](Algorithm/Array/0074/README.md)|
 |0075| Sort Colors|Medium|[link](Algorithm/Array/0075/README.md)|
-
+|0077| Combinations|Medium|[link](Algorithm/Array/0077/README.md)|
+|0078| Subsets|Medium|[link](Algorithm/Array/0078/README.md)|
+|0079| Word Search|Medium|[link](Algorithm/Array/0079/README.md)|
 ## String
 |No.|Title|Difficulty|Solution|
 |---|---|---|---|
