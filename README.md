@@ -46,3 +46,4 @@
 |0002|Add Two Numbers|Medium|[link](Algorithm/LinkedList/0002/README.md)|
 |0019|Remove Nth Node From End of List|Medium|[link](Algorithm/LinkedList/0019/README.md)|
 |0021|Merge Two Sorted Lists|Easy|[link](Algorithm/LinkedList/0021/README.md)|
+|0023|Merge k Sorted Lists|Hard|[link](Algorithm/LinkedList/0023/README.md)|
