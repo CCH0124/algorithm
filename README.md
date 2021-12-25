@@ -47,3 +47,4 @@
 |0019|Remove Nth Node From End of List|Medium|[link](Algorithm/LinkedList/0019/README.md)|
 |0021|Merge Two Sorted Lists|Easy|[link](Algorithm/LinkedList/0021/README.md)|
 |0023|Merge k Sorted Lists|Hard|[link](Algorithm/LinkedList/0023/README.md)|
+|0024|Swap Nodes in Pairs|Medium|[link](Algorithm/LinkedList/0024/README.md)|
