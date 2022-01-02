@@ -48,3 +48,4 @@
 |0021|Merge Two Sorted Lists|Easy|[link](Algorithm/LinkedList/0021/README.md)|
 |0023|Merge k Sorted Lists|Hard|[link](Algorithm/LinkedList/0023/README.md)|
 |0024|Swap Nodes in Pairs|Medium|[link](Algorithm/LinkedList/0024/README.md)|
+|0061|Rotate List|Medium|[link](Algorithm/LinkedList/0061/README.md)|
