@@ -49,3 +49,4 @@
 |0023|Merge k Sorted Lists|Hard|[link](Algorithm/LinkedList/0023/README.md)|
 |0024|Swap Nodes in Pairs|Medium|[link](Algorithm/LinkedList/0024/README.md)|
 |0061|Rotate List|Medium|[link](Algorithm/LinkedList/0061/README.md)|
+|0082|Remove Duplicates from Sorted List II|Medium|[link](Algorithm/LinkedList/0082/README.md)|
