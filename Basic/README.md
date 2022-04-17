@@ -9,3 +9,4 @@
 |0027|Remove Element|Easy|[link](array/0027.md)|
 |0026|Remove Duplicates from Sorted Array|Easy|[link](array/0026.md)|
 |1346|Check If N and Its Double Exist|Easy|[link](array/1346.md)|
+|0941|Valid Mountain Array|Easy|[link](array/0941.md)|
