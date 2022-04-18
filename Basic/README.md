@@ -10,3 +10,4 @@
 |0026|Remove Duplicates from Sorted Array|Easy|[link](array/0026.md)|
 |1346|Check If N and Its Double Exist|Easy|[link](array/1346.md)|
 |0941|Valid Mountain Array|Easy|[link](array/0941.md)|
+|1299|Replace Elements with Greatest Element on Right Side|Easy|[link](array/1299.md)|
