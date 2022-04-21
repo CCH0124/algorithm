@@ -13,3 +13,4 @@
 |1299|Replace Elements with Greatest Element on Right Side|Easy|[link](array/1299.md)|
 |0283|Move Zeroes|Easy|[link](array/0283.md)|
 |0905|Sort Array By Parity|Easy|[link](array/0905.md)|
+|1051|Height Checker|Easy|[link](array/1051.md)|
