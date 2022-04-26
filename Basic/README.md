@@ -15,3 +15,4 @@
 |0905|Sort Array By Parity|Easy|[link](array/0905.md)|
 |1051|Height Checker|Easy|[link](array/1051.md)|
 |0414|Third Maximum Number|Easy|[link](array/0414.md)|
+|0448|Find All Numbers Disappeared in an Array|Easy|[link](array/0448.md)|
