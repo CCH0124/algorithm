@@ -22,3 +22,4 @@
 |---|---|---|---|
 |0344|Reverse String|Easy|[link](recursion/0344.md)|
 |0024|Swap Nodes in Pairs|Medium|[link](recursion/0024.md)|
+|0206|Reverse Linked List|Easy|[link](recursion/0206.md)|
