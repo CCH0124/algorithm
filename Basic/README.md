@@ -24,3 +24,4 @@
 |0024|Swap Nodes in Pairs|Medium|[link](recursion/0024.md)|
 |0206|Reverse Linked List|Easy|[link](recursion/0206.md)|
 |0700|Search in a Binary Search Tree|Easy|[link](recursion/0700.md)|
+|0119|Pascal's Triangle II|Easy|[link](recursion/0119.md)|
