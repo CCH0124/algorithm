@@ -27,3 +27,4 @@
 |0119|Pascal's Triangle II|Easy|[link](recursion/0119.md)|
 |0509|Fibonacci Number|Easy|[link](recursion/0509.md)|
 |0070|Climbing Stairs|Easy|[link](recursion/0070.md)|
+|0104|Maximum Depth of Binary Tree|Easy|[link](recursion/0104.md)|
