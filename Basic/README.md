@@ -16,6 +16,9 @@
 |1051|Height Checker|Easy|[link](array/1051.md)|
 |0414|Third Maximum Number|Easy|[link](array/0414.md)|
 |0448|Find All Numbers Disappeared in an Array|Easy|[link](array/0448.md)|
+|0448|Find All Numbers Disappeared in an Array|Easy|[link](array/0448.md)|
+|1480|Running Sum of 1d Array|Easy|[link](array/1480.md)|
+|0724|Find Pivot Index|Easy|[link](array/0724.md)|
 
 # Recursion
 |No.|Title|Difficulty|Solution|
