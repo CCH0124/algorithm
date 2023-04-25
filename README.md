@@ -34,6 +34,13 @@
 |0078| Subsets|Medium|[link](Algorithm/Array/0078/README.md)|
 |0079| Word Search|Medium|[link](Algorithm/Array/0079/README.md)|
 |0080| Remove Duplicates from Sorted Array II|Medium|[link](Algorithm/Array/0080/README.md)|
+
+## Binary Search
+|No.|Title|Difficulty|Solution|
+|---|---|---|---|
+|0704|Binary Search|Easy|[link](Algorithm/Binary Search/0704/README.md)|
+
+
 ## String
 |No.|Title|Difficulty|Solution|
 |---|---|---|---|
