@@ -20,3 +20,6 @@ A 給自己和 B 東西，E 給 D 東西，但 F 什麼都沒有。
 ## Special Graphs
 
 ### Tree
+沒有環的無向圖。其定義是有 N 個節點和 N-1 條邊
+
+![](https://i.imgur.com/8ZsL8wR.png)
