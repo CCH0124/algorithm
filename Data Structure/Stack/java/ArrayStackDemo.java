@@ -1,4 +1,3 @@
-package stack;
 class ArrayStack {
     private int maxSize;
     private int[] stack;
