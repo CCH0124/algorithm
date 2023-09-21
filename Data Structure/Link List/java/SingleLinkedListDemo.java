@@ -1,6 +1,10 @@
-package linkedlist;
+// package linkedlist;
 
+import java.util.Objects;
 import java.util.Stack;
+import java.util.logging.Logger;
+
+import linkedlist.SingleLinkedList.Node;
 
 class HeroNode {
     public int no;
@@ -21,179 +25,222 @@ class HeroNode {
 
 }
 
-class SingleLinkedList {
-    private HeroNode head;
+class SingleLinkedList<T> {
+
+    private int size = 0;
+
+    private Node<T> head;
+
+    private static class Node<T> {
+        private T data;
+        private Node<T> next;
+
+        public Node(T data, Node<T> next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        @Override
+        public String toString() {
+            return data.toString();
+        }
+    }
+    // private HeroNode head;
 
     public SingleLinkedList() {
         head = null;
     }
 
-    public void add(HeroNode heroNode) {
-        heroNode.next = head;
-        head = heroNode;
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size() == 0;
+    }
+
+    public void add(T elem) {
+       addLast(elem);
+    }
+
+    public void addLast(T elem) {
+        if (isEmpty()) {
+            head = new Node<T>(elem, null);
+       } else {
+            Node<T> cur = head;
+            while ( cur.next != null) {
+                cur = cur.next;
+            }
+            cur.next = new Node<T>(elem, null);
+       }
+       size++;
+    }
+
+    public void addFirst(T elem) {
+        if (isEmpty()) {
+            head = new Node<T>(elem, null);
+        } else {
+            Node<T> node = new Node<T>(elem, head);
+            head = node;
+        }
+        size++;
+    }
+
+    public void addAt(int index, T data) throws Exception {
+        if (index < 0 || index > this.size) {
+            throw new Exception("Illegal Index.");
+        }
+        if (index == 0) {
+            addFirst(data);
+            return;
+        };
+        if (index == size) {
+            addLast(data);
+            return;
+        }
+        Node<T> cur = head;
+        while (index-1 > 0) {
+            cur = cur.next;
+            index--;
+        }
+
+        Node<T> node = new Node<T>(data, cur.next);
+        cur.next = node;
+        size++;
 
     }
 
     public void display() {
         if (head == null) {
-            throw new RuntimeException("is Empty");
+            throw new RuntimeException("is Empty.");
         }
-        HeroNode cur = head;
+        Node<T> cur = head;
         while (cur != null) {
             System.out.println(cur);
             cur = cur.next;
         }
     }
     /**
-     * sort list
-     * @param heroNode
+     * remove first node
      */
-    public void addByOrder(HeroNode heroNode) {
-        if (head == null) {
-            add(heroNode);
-            return;
+    public T removeFirst() {
+        if (isEmpty()) {
+            throw new RuntimeException("Empty list.");
         }
-        HeroNode temp = head;
-        while (temp != null) {
-            if (temp.no > heroNode.no) {
-                heroNode.next = temp;
-                temp = heroNode;
-                head = temp;
-                break;
-            } else if (temp.no < heroNode.no) {
-                if (temp.next == null) {
-                    temp.next = heroNode;
-                    break;
-                } 
-                if (temp.next.no > heroNode.no) {
-                    heroNode.next = temp.next;
-                    temp.next = heroNode;
-                    break;
-                }
-            } else {
-                throw new RuntimeException("is exist");
-            }
-            temp = temp.next;
-
-        }
-    }
-    /**
-     * delete first node
-     */
-    public void deleteFirstNode() {
+        T data = head.data;
 		head = head.next;
+        --size;
+
+        return data;
+    }
+
+    /**
+     * remove last node
+     */
+    public T removeLast() {
+        if (isEmpty()) {
+            throw new RuntimeException("Empty list.");
+        }
+
+        Node<T> cur = head;
+        while ( cur.next.next != null) {
+            cur = cur.next;
+        }
+        
+        T data = cur.next.data;
+        cur.next = null;
+        return data;
     }
 
     /**
      * remove node
      */
-    public void remove(int no) {
-        HeroNode temp = head;
-        if (temp.no == no) {
-            deleteFirstNode();
+    public T removeAt(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Illegal Index.");
         }
-        while(temp.next != null && temp.next.no != no) {
-            temp = temp.next;
-        }
-        if(temp.next != null)
-			temp.next = temp.next.next;
-    }
-    /**
-     * get linklist length
-     * @return
-     */
-    public int size(){
-        int length = 0;
-        HeroNode cur = head;
-        if (head == null) return length;
-        while(cur != null){
-            length++;
+        int i = 0;
+        Node<T> cur = head;
+        while ( i < index - 1 ) {
             cur = cur.next;
-        }
-        return length;
-    }
-    /**
-     * Find the K-th node from the bottom of the linked list.
-     */
-    public HeroNode findLastIndexNode(int index){
-        int size = size();
-        if(head == null || index <= 0 || index > size) return null;
-        HeroNode cur = head;
-        int count = 0;
-        while(count < size-index) {
-            cur = cur.next;
-            count++;
+            i++;
         }
 
-        return cur;
+        return remove(cur);
     }
-    /**
-     * reverse
-     */
-    public void reverseLinkList() {
-        if (head == null || head.next == null) return;
-        HeroNode cur = head;
-        HeroNode next = null;
-        HeroNode reverse = null;
-        while(cur != null) {
-            next = cur.next; // 保存當前節點的下個節點
-            cur.next = reverse; // 將 cur 的下個節點指向新的鏈表最前端
-            reverse = cur; // 將 cur 連接到新的鏈表上
-            cur = next; // cur 後移
-        }
-        head = reverse;
-    }
-    /**
-     * reverse print
-     */
-    public void reversePrint(){
-        if (head == null || head.next == null) return;
-        Stack<HeroNode> stack = new Stack<>();
-        HeroNode cur = head;
-        while(cur != null) {
-            stack.push(cur);
-            cur = cur.next;
+
+    private T remove(Node<T> elem) {
+        if (Objects.isNull(elem.next.next)) {
+            return removeLast();
         }
 
-        while (stack.size() > 0) {
-            System.out.println(stack.pop());
+        if (elem == head) {
+            return removeFirst();
         }
-        
+        T data = elem.next.data;
+        elem.next = elem.next.next;
+        --size;
+        return data;
+    }
+
+    public int indexOf(Object obj) { 
+        int index = 0;
+        Node<T> cur = head;
+        if (Objects.isNull(obj)) {
+            return -1;
+        }
+        while (cur.next != null && !Objects.equals(obj, cur.data)) {
+            cur = cur.next;
+            index++;
+        }
+
+        return index == 0 ? -1 : index;
     }
 
 }
 
 public class SingleLinkedListDemo {
-    public static void main(String[] args) {
+    private static Logger LOG = Logger.getLogger(SingleLinkedListDemo.class.getName());
+    public static void main(String[] args) throws Exception {
         HeroNode hero1 = new HeroNode(1, "itachi", "i");
         HeroNode hero2 = new HeroNode(2, "asdasd", "asd");
         HeroNode hero3 = new HeroNode(3, "vvvvvv", "v");
         HeroNode hero4 = new HeroNode(4, "qqqqq", "q");
+        HeroNode hero5 = new HeroNode(5, "madara", "m");
 
-        SingleLinkedList singleLinkedList = new SingleLinkedList();
-        // singleLinkedList.add(hero1);
-        // singleLinkedList.add(hero2);
-        // singleLinkedList.add(hero3);
-        // singleLinkedList.add(hero4);
-        // singleLinkedList.display();
+        SingleLinkedList singleLinkedList = new SingleLinkedList<HeroNode>();
+        singleLinkedList.add(hero1);
+        singleLinkedList.display();
+        LOG.info("Insert hero2 to first");
+        singleLinkedList.addFirst(hero2);
+        singleLinkedList.display();
+        LOG.info("Insert hero3 to Last");
+        singleLinkedList.addLast(hero3);
+        singleLinkedList.display();
+        LOG.info("size is: " + singleLinkedList.size());
+        LOG.info("Insert hero4 to index 2");
+        singleLinkedList.addAt(2, hero4);
+        singleLinkedList.display();
 
-        singleLinkedList.addByOrder(hero2);
-        singleLinkedList.addByOrder(hero1);
-        singleLinkedList.addByOrder(hero4);
-        singleLinkedList.addByOrder(hero3);
+        LOG.info("Remove First node");
+        var removeFirst = singleLinkedList.removeFirst();
+        LOG.info("First node: " + removeFirst.toString());
         singleLinkedList.display();
-        System.out.println("-------------------------------------------------------------------------------------");
-        singleLinkedList.remove(2);
-        System.out.println("-------------------------------------------------------------------------------------");
+
+        LOG.info("Remove Last");
+        var removeLast = singleLinkedList.removeLast();
+        LOG.info("Remove Last: " + removeLast.toString());
         singleLinkedList.display();
-        System.out.println("-------------------------------------------------------------------------------------");
-        System.out.println(singleLinkedList.size());
-        System.out.println("-------------------------------------------------------------------------------------");
-        System.out.println(singleLinkedList.findLastIndexNode(2));
-        System.out.println("-------------------------------------------------------------------------------------");
-        singleLinkedList.reverseLinkList();
+
+        singleLinkedList.add(hero5);
+
+        LOG.info("Remove at index 2");
+        var removeAt = singleLinkedList.removeAt(1);
+        LOG.info("Remove at index 2 node: " + removeAt.toString());
         singleLinkedList.display();
-        System.out.println("-------------------------------------------------------------------------------------");
-        singleLinkedList.reversePrint();
+
+        
+        int indexOf = singleLinkedList.indexOf(hero5);
+        LOG.info("hero5 index is: " + indexOf);
     }
 }
