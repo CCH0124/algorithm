@@ -30,3 +30,27 @@ class Solution {
     }
 }
 ```
+
+```java
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        int s = 0;
+        int e = nums.length - 1;
+        int [] res  = new int[nums.length];
+        int i = nums.length - 1;
+        while(s <= e) {
+            int a = nums[s]*nums[s];
+            int b = nums[e]*nums[e];
+            if (a < b) {
+                res[i] = b;
+                e--;
+            } else {
+                res[i] = a;
+                s++;
+            }
+            i--;
+        }
+        return res;
+    }
+}
+```
