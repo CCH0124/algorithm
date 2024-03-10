@@ -1,4 +1,4 @@
-```java=
+```java
 /*
 Detect a cycle in a linked list. Note that the head pointer may be 'null' if the list is empty.
 
