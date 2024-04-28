@@ -39,3 +39,24 @@ class Solution {
     }
 }
 ```
+
+```java
+class Solution {
+    public boolean increasingTriplet(int[] nums) {
+        int i = Integer.MAX_VALUE;
+        int j = Integer.MAX_VALUE;
+        for (int x=0; x<nums.length; x++){
+            if (nums[x] <= i) {
+                i = nums[x];
+            } else if (nums[x] >= i && nums[x] <= j ) {
+                j = nums[x];
+            } 
+            if (nums[x] > j){
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
+```
