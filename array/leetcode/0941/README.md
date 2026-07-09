@@ -1,3 +1,10 @@
+---
+title: "Valid Mountain Array"
+date: 2026/07/08
+tags: ["Array","Two Pointers"]
+draft: false
+---
+
 Given an array of integers `arr`, return *`true` if and only if it is a valid mountain array*.
 
 Recall that arr is a mountain array if and only if:
