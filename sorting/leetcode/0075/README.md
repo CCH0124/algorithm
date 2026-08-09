@@ -38,26 +38,80 @@ You must solve this problem without using the library's sort function.
 
 **java**
 
-```java
-class Solution {
-    public void sortColors(int[] nums) {
-        int minIndex;
-        for (int i = 0; i<nums.length; i++) {
-            minIndex = i;
-            for (int j = i+1; j<nums.length; j++) {
-                if (nums[minIndex] > nums[j] ) {
-                    minIndex = j;
+1. Selection Sort
+
+    ```java
+    class Solution {
+        public void sortColors(int[] nums) {
+            // defined minIndex to track the index of the minimum element in the unsorted part of the array
+            int minIndex;
+            for (int i = 0; i<nums.length; i++) {
+                minIndex = i;
+                for (int j = i+1; j<nums.length; j++) {
+                    // find the index of the minimum element in the unsorted part of the array
+                    if (nums[minIndex] > nums[j] ) {
+                        minIndex = j;
+                    }
                 }
+                // swap the minimum element with the current element
+                int temp = nums[i];
+                nums[i] = nums[minIndex];
+                nums[minIndex] = temp;
             }
-            int temp = nums[i];
-            nums[i] = nums[minIndex];
-            nums[minIndex] = temp;
         }
     }
-}
-```
+    ```
 
-**Complexity**
+    **Complexity**
 
-* **Time Complexity**: $O(n^2)$
-* **Space Complexity**: $O(1)$
+    * **Time Complexity**: $O(n^2)$
+    * **Space Complexity**: $O(1)$
+
+
+2. Counting Sort
+
+    因為陣列裡的數字固定只有 0、1、2 三種（分別代表紅、白、藍），數值範圍極小（$K = 3$），因此非常適合用 Counting Sort（計數排序） 來解決。
+
+    ```java
+    class Solution {
+        public void sortColors(int[] nums) {
+            int count0 = 0;
+            int count1 = 0;
+            int count2 = 0;
+            for (int num : nums) {
+                if (num == 0) {
+                    count0++;
+                } else if (num == 1) {
+                    count1++;
+                } else if (num == 2) {
+                    count2++;
+                }
+            }
+            
+            int index = 0;
+
+            while (count0 > 0) {
+                nums[index++] = 0;
+                count0--;
+            }
+
+            while (count1 > 0) {
+                nums[index++] = 1;
+                count1--;
+            }
+            while (count2 > 0) {
+                nums[index++] = 2;
+                count2--;
+            }
+        }
+    }
+    ```
+
+    **Complexity**
+
+    * **Time Complexity**: $O(n)$
+        * first time scan to count the frequency of each number, $O(N)$
+        * second time scan to fill the array with the counted frequency, $O(N)$
+        * total time complexity is $O(N) + O(N) = O(N)$
+    * **Space Complexity**: $O(1)$
+        * Only three variables are used to store the count of each number, so the space complexity is $O(1)$.

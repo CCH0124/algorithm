@@ -15,3 +15,7 @@ Heap Sort 通常會把陣列想像成一棵完全二元樹（Complete Binary Tre
     * 它的左兒子位置就在：`2 * i + 1`
     * 它的右兒子位置就在：`2 * i + 2`
     * 子節點i的父節點在位置 $$\lfloor (i-1)/2\rfloor$$
+
+## Quick Sort
+
+## Counting Sort
